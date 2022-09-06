@@ -8,7 +8,7 @@ const Hero = () => {
           <span className="firstName">Morten</span>
           <span className="lastName">Nørrehus</span>
         </h1>
-        <h2>Jeg laver ting til internettet!</h2>
+        <h2>Jeg laver ting til internettet</h2>
         <h3>
           <i>(Shopify, Liquid, JavaScript, React) </i>
         </h3>
