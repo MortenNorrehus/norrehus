@@ -115,6 +115,10 @@ section {
   }
 }
 
+.App nav + div:not(.home) section {
+  padding-top: 50px;
+}
+
 .grid.three-columns {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -216,6 +220,8 @@ section {
 
 .navbar {
   padding: 20px 0px;
+  position: relative;
+  height: 50px;
 }
 
 .navbar .logo {
@@ -255,21 +261,35 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  max-width: 780px;
 }
 
 .navbar-nav {
   display: flex;
+  flex-direction: column;
 }
 
 .navbar-nav li a,
 .navbar-nav li button {
-  margin: 0 24px;
+  margin: 15px 24px;
   font-size: 1.7rem;
   font-family: "CircularStd-Medium";
   letter-spacing: 1px;
   font-weight: 500;
   cursor: pointer;
   padding: 0;
+  display: grid;
+  text-align: left;
+}
+
+.navbar-nav li a .sub,
+.navbar-nav li button .sub {
+  font-family: "Helvetica", sans-serif;
+  margin-top: 5px;
+  font-size: 1.3rem;
+  color: var(--colorGrey);
+  font-weight: 300;
 }
 
 .navbar-nav li a.active {
@@ -287,7 +307,6 @@ section {
 #contact {
   appearance: unset;
   background: none;
-  color: #fff;
   border: none;
 }
 
@@ -475,13 +494,13 @@ section {
     flex-direction: column;
     align-items: start;
   }
-  .navbar-nav {
+  /* .navbar-nav {
     display: none;
     flex-direction: column;
     border-radius: 10px;
   }
 
-  .nav--container {
+  /* .nav--container {
     width: 100%;
   }
 
@@ -506,7 +525,7 @@ section {
 
   .navbar-toggler {
     display: block;
-  }
+  }*/
 
   .info--container {
     padding: 10px;
@@ -518,11 +537,15 @@ section {
 
 /* Hero */
 
+.home .hero {
+  height: calc(100vh - 90px);
+}
+
 .hero {
   color: #fff;
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
+  padding: 0;
 }
 
 /*
@@ -545,15 +568,14 @@ section {
   flex-direction: column;
   text-transform: uppercase;
   width: 100%;
+  font-size: 2rem !important;
+  font-weight: 300;
   font-family: "CircularStd";
-  margin: auto;
-  text-align: center;
+
   margin-bottom: 10px;
   max-width: 600px;
-  width: 90vw;
+
   margin: auto;
-  align-items: center;
-  justify-content: center;
 }
 
 .firstName {
@@ -589,10 +611,10 @@ section {
 
 .hero .subtitle {
   margin: auto;
-  font-size: clamp(2.1rem, calc(0.2rem + 3.58vw), 2.5rem);
+  font-size: clamp(1.5rem, calc(0.2rem + 3.58vw), 2rem);
   max-width: 600px;
-  text-align: center;
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .hero .about {
@@ -605,6 +627,7 @@ section {
 
 .hero .button {
   margin-bottom: 50px;
+  margin: 0;
 }
 
 .client-logos {
@@ -649,13 +672,8 @@ section {
   margin: 4rem auto;
   padding: 20px 30px;
   border-radius: 50px;
-  background: rgb(255, 225, 79);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 225, 79, 1) 0%,
-    rgba(254, 211, 0, 1) 100%
-  );
-  box-shadow: 0 4px 0 0 #e5ad06;
+  border: 2px solid rgb(255, 225, 79);
+  color: rgb(255, 225, 79);
   transition: all 0.3s ease-in-out;
   align-items: center;
   display: flex;
@@ -675,7 +693,6 @@ section {
 
 .button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 7px 0 0 #e5ad06;
 }
 
 .button:active {
@@ -2679,4 +2696,54 @@ html.force--consent.show--consent body {
 
 .small-margin {
   margin: 20px 0px;
+}
+
+.navigation {
+  border-radius: 20px;
+  transition: all 0.5s;
+  transition-delay: 0.5s;
+  z-index: 1;
+  min-width: 300px;
+}
+
+.navigation.revealed {
+  background-color: #fff;
+  transition: all 0.25s;
+  box-shadow: -1px 0px 56px -18px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 0px 56px -18px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 0px 56px -18px rgba(0, 0, 0, 0.75);
+}
+
+.navigation--toggle {
+  all: unset;
+  pointer-events: all;
+  display: flex;
+  justify-content: right;
+  transform: translate(10px, 10px);
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.navigation--toggle img {
+  width: 60px;
+  height: 60px;
+}
+
+.navbar-nav {
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.25s;
+  transition-delay: 0.25s;
+}
+
+.navigation.revealed .navbar-nav {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation {
+    right: 10px;
+    left: 10px;
+  }
 }

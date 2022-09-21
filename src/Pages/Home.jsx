@@ -9,10 +9,10 @@ import Testimonials from "../components/Testimonials";
 
 function Home() {
   return (
-    <div>
+    <div className="home">
       <Hero />
-      <Why />
       <About />
+      <Why />
       <GoodFit />
       <Clients />
       <Cases />

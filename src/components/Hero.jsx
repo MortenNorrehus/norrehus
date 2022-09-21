@@ -4,18 +4,20 @@ const Hero = () => {
   return (
     <section className="hero front bg-black">
       <div className="content flex-col">
-        <h1>
+        {/*}  <h1>
           <span className="firstName">Morten</span>
           <span className="lastName">Nørrehus</span>
-        </h1>
-        <h2>Jeg laver ting til internettet</h2>
+  </h1> {*/}
+        <h1>Hey! jeg er freelance frontend udvikler</h1>
+
+        {/*} <h2>Jeg laver ting til internettet</h2>
         <h3>
           <i>(Shopify, Liquid, JavaScript, React) </i>
-        </h3>
+</h3> {*/}
 
-        <span className="subtitle text-grey">
-          Jeg hjælper virksomheder med kode, fede features og digital sparring
-          der skaber konverteringer!
+        <span className="subtitle">
+          Mit navn er Morten Nørrehus, og jeg hjælper virksomheder med kode,
+          fede features og digital sparring der skaber konverteringer!
         </span>
         <Button text="Se hvad jeg har lavet" link="#cases" />
       </div>
