@@ -2741,6 +2741,14 @@ html.force--consent.show--consent body {
   transition-delay: 0.25s;
 }
 
+.navigation--container {
+  pointer-events: none;
+}
+
+.navigation.revealed .navigation--container {
+  pointer-events: all;
+}
+
 .navigation.revealed .navbar-nav {
   opacity: 1;
   transform: translateY(0px);
