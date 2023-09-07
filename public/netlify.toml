@@ -1,4 +1,4 @@
 [[redirects]]
-  from = "/*"
-  to = "/#/"
+  from = "/hireme"
+  to = "/#/hireme"
   status = 200
