@@ -4,7 +4,12 @@ import ContactPopup from "./components/ContactPopup";
 
 import Footer from "./components/Footer";
 
-import { HashRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+} from "react-router-dom";
 
 function App() {
   return (
