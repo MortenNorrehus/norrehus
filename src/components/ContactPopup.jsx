@@ -39,7 +39,7 @@ const ContactPopup = () => {
         </p>
         <div className="contact--info">
           <a href="tel:20853693">Tlf: 20 85 36 93</a>
-          <a href="mailto:morten@raincode.dk">Email</a>
+          <a href="mailto:kontakt@mortennorrehus.dk">Email</a>
           <a target="_blank" href="https://www.linkedin.com/in/mortennorrehus/">
             LinkedIn
           </a>
