@@ -21,7 +21,7 @@ const Footer = () => {
           <a target="_blank" href="https://www.linkedin.com/in/mortennorrehus/">
             <img src={linkedin} />
           </a>
-          <a target="_blank" href="mailto:morten@raincode.dk">
+          <a target="_blank" href="mailto:kontakt@mortennorrhus.dk">
             <img src={mail} />
           </a>
         </div>
